@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bridGe - Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="top-navbar">
+    <div class="logo">
+      <span class="logo-part1">bridG</span><span class="logo-part2">e</span>
+    </div>
+    <div class="menu">
+      <a href="/" class="active">Home</a>
+      <a href="" class="">Find Friends</a> 
+      <a href="read.html" class="">Calendar</a>
+      <a href="leaderboard.html" class="">Chat</a>
+      <a href="profile.html" class="">Profile</a>
+    </div>
+    <input type="text" class="search-box" id="searchInput" placeholder="Search">
+  </div>
+
+  <div class="grid-container" id="grid">
+    <!-- Images will be added dynamically -->
+  </div>
+
+  <script>
+      const imageUrls = [
+        '/Users/senavuvor/Desktop/HuddleHiveHackathon25/1.jpeg',
+        '/Users/senavuvor/Desktop/HuddleHiveHackathon25/2.jpg',
+        '/Users/senavuvor/Desktop/HuddleHiveHackathon25/3.png',
+        '/Users/senavuvor/Desktop/HuddleHiveHackathon25/4.png',
+        '/Users/senavuvor/Desktop/HuddleHiveHackathon25/5.png',
+        '/Users/senavuvor/Desktop/HuddleHiveHackathon25/6.png',
+        '/Users/senavuvor/Desktop/HuddleHiveHackathon25/7.png',
+        '/Users/senavuvor/Desktop/HuddleHiveHackathon25/8.png',
+        '/Users/senavuvor/Desktop/HuddleHiveHackathon25/9.jpg',
+        '/Users/senavuvor/Desktop/HuddleHiveHackathon25/10.jpg',
+        '/Users/senavuvor/Desktop/HuddleHiveHackathon25/11.png',
+        '/Users/senavuvor/Desktop/HuddleHiveHackathon25/12.png',
+        '/Users/senavuvor/Desktop/HuddleHiveHackathon25/1.jpeg',
+        '/Users/senavuvor/Desktop/HuddleHiveHackathon25/2.jpg',
+        '/Users/senavuvor/Desktop/HuddleHiveHackathon25/3.png',
+        '/Users/senavuvor/Desktop/HuddleHiveHackathon25/4.png',
+        '/Users/senavuvor/Desktop/HuddleHiveHackathon25/5.png',
+        '/Users/senavuvor/Desktop/HuddleHiveHackathon25/6.png',
+        '/Users/senavuvor/Desktop/HuddleHiveHackathon25/7.png',
+        '/Users/senavuvor/Desktop/HuddleHiveHackathon25/8.png',
+      ];
+
+      const grid = document.getElementById("grid");
+      imageUrls.forEach(url => {
+          const item = document.createElement("div");
+          item.classList.add("grid-item");
+          item.innerHTML = `<img src="${url}" alt="Image">`;
+          grid.appendChild(item);
+      });
+  </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const menuIcon = document.querySelector('.menu-icon');
+      const menu = document.querySelector('.menu');
+
+      menuIcon.addEventListener('click', function() {
+          menu.classList.toggle('show-menu');
+      });
+  });
+</script>
+
+</body>
+</html>
